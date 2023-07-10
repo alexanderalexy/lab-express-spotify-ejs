@@ -1,0 +1,12 @@
+<h1>Albums</h1>
+<% albums.forEach(album => { %>
+  <div>
+    <h3><%= album.name %></h3>
+    <% if (album.images.length > 0) { %>
+      <img src="<%= album.images.map[0].url %>" alt="Album Cover">
+    <% } else { %>
+      <p>No cover image available</p>
+    <% } %>
+    <a href="/albums/<%= album.id %>">View Tracks</a>
+  </div>
+<% }) %>
